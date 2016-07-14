@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		title Document
+	body
+		.inner
+			h1 Inicio
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eveniet assumenda, repellendus a neque rerum, quod repellat cumque ratione culpa libero id magnam iste corporis necessitatibus et! Error, fugit iste.
+
+		script(type="text/javascript").
+			function checkIfGenma(){
+				var thisHref = window.location.href;
+				thisHref = thisHref.substr(thisHref.lastIndexOf('/') + 1);
+				thisHref = thisHref.split(".html");	
+
+				if(typeof this["isGenma"] === 'undefined')
+				{
+					window.location.href = "./index.html"+"#"+thisHref[0];
+				}
+			}
+
+			checkIfGenma();
+
+			animationIn = "left";
+			animationOut = "left";
+	

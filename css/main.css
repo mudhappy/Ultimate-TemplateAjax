@@ -1,0 +1,113 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6em;
+  color: #bbbbbb;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* === Interior === */
+.inner {
+  opacity: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+#main-wrapper {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 1;
+  color: #666;
+}
+
+@media screen and (max-width: 980px) {
+  #main-wrapper {
+    width: 100% !important;
+    padding-top: 100px;
+  }
+}
+
+/* === Loader === */
+#loader {
+  display: none;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 999999;
+}
+
+#ajax-loader, .ajax-loader {
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  opacity: 0.8;
+  height: 32px;
+  width: 32px;
+}
+
+#loader #ajax-loader, #loader .ajax-loader {
+  top: 20px;
+  right: 20px;
+  margin: 0px;
+}
+
+#pageTitle {
+  text-transform: uppercase;
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: 28px;
+  opacity: 0;
+  color: white;
+}
+
+/* === Main menu === */
+#menu-wrapper {
+  width: 250px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  z-index: 2;
+  background: rgba(0, 150, 136, 0.4);
+}
+
+@media screen and (max-width: 980px) {
+  #menu-wrapper {
+    width: 100% !important;
+    height: 100px !important;
+    display: block;
+    position: relative;
+  }
+}
